@@ -9,17 +9,22 @@ const eventSchema = mongoose.Schema(
     },
     description: {
       type: String,
-      
     },
     photo: {
       type: String,
-       
     },
     location: {
       type: String,
       required: true,
     },
-
+    date: {
+      type: Date,
+      required: true,
+    },
+    availableTickets:{
+      type: number,
+      required: true,
+    }
   },
   {
     timestamps: true,
