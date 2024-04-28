@@ -22,7 +22,7 @@ const eventSchema = mongoose.Schema(
       required: true,
     },
     availableTickets:{
-      type: number,
+      type: Number,
       required: true,
     }
   },

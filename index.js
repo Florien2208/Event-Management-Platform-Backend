@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-
+const cors = require("cors");
 // import { authenticateToken } from "./middleware/authenticateToken ";
 
 
@@ -11,7 +11,11 @@ const express = require("express");
 import "dotenv/config";
 import mainRouter from "./routes";
 const app = express();
+const corsOptions = {
+  origin: "http://localhost:5173", // Replace this with the origin of your frontend application
+};
 
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
@@ -27,6 +31,7 @@ mongoose.connect(process.env.dbConnect).then(() => {
   console.log("the mongoose database connected successfully");
 });
 app.use("/api", mainRouter);
+
 
 const options = {
   definition: {
