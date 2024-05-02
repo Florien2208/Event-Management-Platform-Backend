@@ -8,7 +8,7 @@
     "start:prod": "powershell -Command \"$env:NODE_ENV='production'; nodemon server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "emmanuel-shyirambere",
+  "author": "Mahoro Mpakanyi Florien",
   "license": "ISC",
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.3",
